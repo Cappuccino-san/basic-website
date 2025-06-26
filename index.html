@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Basic Local Website</title>
+    <!-- Link to Tailwind CSS for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Apply the Inter font globally if available, fallback to sans-serif */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .container {
+            background-color: #ffffff; /* White background for the content box */
+            padding: 2.5rem; /* Large padding */
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            text-align: center;
+            max-width: 90%; /* Ensure responsiveness on smaller screens */
+            width: 500px; /* Max width for desktop */
+        }
+        .button-primary {
+            background-color: #4f46e5; /* Indigo 600 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem; /* Rounded corners for button */
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            display: inline-block; /* Allows padding and margin */
+            margin-top: 1.5rem;
+        }
+        .button-primary:hover {
+            background-color: #4338ca; /* Darker indigo on hover */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Welcome to My Website!</h1>
+        <p class="text-lg text-gray-700 mb-6">
+            This is a very simple webpage created with HTML and styled with Tailwind CSS.
+            You can modify this file to build more complex websites.
+        </p>
+        <button id="actionButton" class="button-primary">
+            Click Me
+        </button>
+    </div>
+
+    <script>
+        // Get a reference to the button
+        const actionButton = document.getElementById('actionButton');
+
+        // Add an event listener to the button
+        actionButton.addEventListener('click', () => {
+            // Display a message in the console when the button is clicked
+            console.log('Button clicked! Hello from JavaScript!');
+            // You could also change text or add more dynamic content here
+            actionButton.textContent = 'Button Clicked!';
+            actionButton.style.backgroundColor = '#10b981'; // Green 500
+        });
+    </script>
+</body>
+</html>
